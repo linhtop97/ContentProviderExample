@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_5"
+    android:layout_marginStart="@dimen/dp_5"
+    android:layout_marginEnd="@dimen/dp_5"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout
+        android:padding="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/img_avartar"
+            android:scaleType="fitXY"
+            android:src="@drawable/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:gravity="start"
+            android:id="@+id/text_name"
+            android:layout_marginStart="3dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/img_avartar"
+            android:textStyle="bold"
+            android:text="@string/contact_name"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/text_phone"
+            android:gravity="start"
+            app:layout_constraintLeft_toRightOf="@id/img_avartar"
+            android:layout_marginStart="3dp"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/contact_number"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            app:layout_constraintRight_toLeftOf="@id/img_call"
+            android:id="@+id/img_favorite"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/star_unfavorit"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <ImageView
+            app:layout_constraintRight_toLeftOf="parent"
+            android:id="@+id/img_call"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/call"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
